@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel='stylesheet' href='stylesheetCriadorRotina.css'>
+    <link rel="icon" href="images/logo.png">
+    <title>No Excuse - Criador de Rotina de Treino</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-space">
+            <!-- You can place your logo image here -->
+            <img src="images/logo.png" alt="Logo" class="logo-img">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="criadorRotina.html">Criador de Rotina</a></li>
+        </ul>
+    </nav>
+    <h1>Projeto de Ano</h1>
+
+    <div id="agreementModal" class="modal">
+        <div class="modal-content">
+            <h2>Bem-vindo!</h2>
+            <div class="modal-scroll-text">
+                <p>
+                    Por favor, leia e aceite os termos antes de continuar.<br><br>
+                    Essa rotina é apenas uma sugestão gerada por uma inteligência artificial feita por um aluno do ensino médio, consulte um especialista caso tenha dúvidas e pare de realizar os exercícios em caso de dor excessiva ou mal-estar. <br> Você conhece o seu corpo e seus limites, cada pessoa é diferente, experiemente diferentes números de séries, repetições e peso até encontrar a melhor combinação para você. <br> Não me responsabilizo por qualquer tipo de lesões, machucados ou qualquer outra consequência negativa herdada dos exercícios aqui recomendados. <br> Embora eu tenha feito a devida pesquisa para tentar garantir o melhor resultado e as melhores informações, são simplesmente muitas variáveis para ser possível de analizar e calcular todas elas. <br> Esse projeto não foi feito com a intenção de substituir um profissional de Educação Física e eu recomendo que você consulte um verdadeiro profissional antes de realizar qualquer recomendação feita por essa inteligência artifical.  
+                    <br><br>
+                    Ao clicar em "Aceitar", você confirma ter lido e entendido os riscos e consequências aqui citados, e entende que deveria consultar um verdadeiro profissional antes de tomar qualquer decisão.
+                </p>
+            </div>
+            <button id="acceptModal">Aceitar</button>
+        </div>
+    </div>
+
+    <div class="selector">
+        <h3>Qual tipo de treino você prefere?</h3>
+        <select id="tipoTreinoXOR">
+            <option value="0">Calistenia</option>
+            <option value="1">Academia</option>
+        </select>
+        <h3>Qual o seu objetivo?</h3>
+        <select id="objetivoXOR">
+            <option value="0">Hipertrofia</option>
+            <option value="1">Emagrecimento</option>
+            <option value="2">Definição</option>
+            <option value="3">Condicionamento</option>
+            <option value="4">Força</option>
+        </select>
+        <h3>Qual o seu nível de experiência?</h3>
+        <select id="nivelXOR">
+            <option value="0">Iniciante</option>
+            <option value="1">Intermediário</option>
+            <option value="2">Avançado</option>
+        </select>
+        <h3>Qual sua faixa etária?</h3>
+        <select id="idadeXOR">
+            <option value="0">Menor de 18</option>
+            <option value="1">Maior de 18</option>
+            <option value="2">50 anos ou mais</option>
+        </select>
+        <h3>Você tem alguma lesão?</h3>
+        <div id="lesaoContainer">
+            <label>
+                <input type="checkbox" id="lesaoPescoco">
+                Pescoço
+            </label><br>
+            <label>
+                <input type="checkbox" id="lesaoOmbro">
+                Ombro
+            </label><br>
+            <label>
+                <input type="checkbox" id="lesaoCotovelo">
+                Cotovelo
+            </label><br>
+            <label>
+                <input type="checkbox" id="lesaoMao">
+                Punho/Mão
+            </label><br>
+            <label>
+                <input type="checkbox" id="lesaoCostasSuperior">
+                Parte de cima das costas
+            </label><br>
+            <label>
+                <input type="checkbox" id="lesaoCostasInferior">
+                Parte de baixo das costas
+            </label><br>
+            <label>
+                <input type="checkbox" id="lesaoCintura">
+                Cintura
+            </label><br>
+            <label>
+                <input type="checkbox" id="lesaoJoelho">
+                Joelho
+            </label><br>
+            <label>
+                <input type="checkbox" id="lesaoPe">
+                Tornozelo/Pé
+            </label>
+        </div>
+        <h3>Quantos dias por semana você pode treinar?</h3>
+        <select id="diasXOR">
+            <option value="0">1 dia</option>
+            <option value="1">2 dias</option>
+            <option value="2">3 dias</option>
+            <option value="3">4 dias</option>
+            <option value="4">5 dias</option>
+        </select>
+    </div> <br>
+    <div class="buttonContainer"><button class="button" onclick="confirmar()">Confirmar</button></div> <br>
+
+    <div id="tabelaRotinaContainer"></div>
+    <div id="setsXRepsContainer"></div>
+    <div id="exercisePreview">
+        <img id="exercisePreviewImg" src="">
+    </div>
+    <script src="javascriptCriadorRotina.js"></script>
+    <script src="modalJavascript.js"></script>
+</body>
+</html>

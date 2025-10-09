@@ -1,0 +1,219 @@
+body {
+    background-color: #333333;
+    color: white;
+    font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'sans-serif';
+    margin: 0;
+    padding: 0;
+    background-image: url(./images/academia1.jpg)
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+a:hover {
+    color: #dddddd;
+}
+.navbar {
+    width: calc(100% - 32px);
+    background: #222;
+    display: flex;
+    align-items: center;
+    padding: 0px 0px 0px 32px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    font-size: 1.5rem;
+}
+
+.logo-space {
+    height: 160px;
+    display: flex;
+    align-items: center;
+    margin-right: 32px;
+}
+
+.logo-img {
+    height: 200px;
+    width: auto;
+    filter: drop-shadow(0 0 8px #c00);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: #ff2d2d;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.2s;
+}
+
+.nav-links li a:hover {
+    color: #fff;
+    text-shadow: 0 0 8px #ff2d2d;
+}
+#section1 h2, #fitnessNews h2 {
+    margin-top: 32px;
+    text-align: center;
+    color: #ff2d2d;
+    letter-spacing: 2px;
+    font-size: 2.5em;
+}
+#middlePart {
+    position: relative;
+    margin: 0 auto;
+    width: 66.66%;
+    background-color: #222222;
+    height: 1920px;
+    overflow: hidden;
+}
+#gallery {
+    display: flex;
+    background-color: #222222;
+    width: 100%;
+    height: 25rem;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    justify-self: center;
+    z-index: 0;
+    width: 120%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.galleryButton {
+    position: absolute;
+    border-radius: 1000px;
+    background-color: #333;
+    opacity: 0.3;
+    color: #dddddd;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    bottom: 150px;
+    z-index: 1
+}
+#forwardGallery {
+    right: 10%;
+}
+#backwardGallery {
+    left: 10%;
+}
+#imgInGallery {
+    position: absolute;
+    width: 70%;
+    margin: 20px;
+    justify-self: center;
+    align-self: center;
+}
+#galleryDescContainer {
+    position: absolute;
+    bottom: 0%;
+    height: 4.7rem;
+    background-color: #2222228e;
+    z-index: 10;
+    width: 100%;
+}
+#galleryDesc {
+    position: absolute;
+    left: 25%;
+}
+#section1 {
+    background:#353535;
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    margin-top: 32px;
+}
+.button {
+    background: linear-gradient(90deg, #ff2d2d 0%, #c00 100%);
+    color: #fff;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 8px rgba(255,45,45,0.15);
+}
+
+.button:hover {
+    background: linear-gradient(90deg, #c00 0%, #ff2d2d 100%);
+    box-shadow: 0 4px 16px rgba(255,45,45,0.25);
+}
+
+.button:active {
+    background: #900;
+}
+#criadorRotinaBtn {
+    display: block;
+    margin: 24px auto;
+    padding: 18px 48px;
+    font-size: 1.3em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #ff2d2d 0%, #c00 100%);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(255,45,45,0.18), 0 2px 8px #222;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    outline: none;
+    position: relative;
+}
+
+#criadorRotinaBtn:hover {
+    background: linear-gradient(90deg, #c00 0%, #ff2d2d 100%);
+    box-shadow: 0 8px 32px rgba(255,45,45,0.28), 0 2px 8px #222;
+    transform: scale(1.07) rotate(-2deg);
+    text-shadow: 0 0 8px #ff2d2d;
+}
+
+#criadorRotinaBtn:active {
+    background: #900;
+    transform: scale(0.98);
+}
+#fitnessNews {
+    padding: 2rem;
+    background:#353535;
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    margin-top: 32px;
+}
+#fitnessNews a {
+    font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'sans-serif';
+    font-size: 1.3rem;
+    color: #c00;
+}
+#fitnessNews ul {
+    list-style: none;
+}
+#section1 p {
+    margin-left: 2rem;
+}
+@media(max-width: 995px) {
+    body {
+        background-image: none;
+    }
+    #middlePart {
+        width: auto;
+    }
+}
