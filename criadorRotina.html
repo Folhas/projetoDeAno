@@ -5,19 +5,53 @@
     <link rel='stylesheet' href='stylesheetCriadorRotina.css'>
     <link rel="icon" href="images/logo.png">
     <title>No Excuse - Criador de Rotina de Treino</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo-space">
-            <!-- You can place your logo image here -->
-            <img src="images/logo.png" alt="Logo" class="logo-img">
+    <header>
+        <!-- Header Start -->
+        <div class="header-area header-transparent">
+            <div class="main-header header-sticky sticky-bar">
+                <div class="container-fluid">
+                    <div class="menu-wrapper d-flex align-items-center justify-content-between">
+                        <!-- Logo -->
+                        <div class="logo">
+                            <a href="index.html"><img src="assets/img/logo/logo.png" id="logoImg"alt=""></a>
+                        </div>
+                        <!-- Main-menu -->
+                        <div class="main-menu f-right d-none d-lg-block">
+                            <nav>
+                                <ul id="navigation">
+                                    <li><a href="index.html">Voltar</a></li>
+                                </ul>
+                            </nav>
+                        </div>          
+                        <!-- Header-btn -->
+                        <div class="header-btns d-none d-lg-block f-right">
+                         <a href="criadorRotina.html" class="btn">Criador de Rotina</a>
+                     </div>
+                     <!-- Mobile Menu -->
+                     <div class="col-12">
+                        <div class="mobile_menu d-block d-lg-none"><div class="slicknav_menu"><a href="#" aria-haspopup="true" role="button" tabindex="0" class="slicknav_btn slicknav_collapsed"><span class="slicknav_icon"><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span></a><ul class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu" style="display: none;">
+                                    <li><a href="index.html" role="menuitem" tabindex="-1">Home</a></li>
+                                    <li><a href="#jumpToObjetivos" role="menuitem" tabindex="-1">Vantagens</a></li>
+                                    <li><a href="#jumpToNoticias" role="menuitem" tabindex="-1">Notícias</a></li>
+                                    <li><a href="#jumpToSobre" role="menuitem" tabindex="-1">Sobre nós</a></li>
+                                    <li><a href="#jumpToContato" role="menuitem" tabindex="-1">Contatos</a></li>
+                                        <span class="slicknav_arrow">+</span></a><ul class="submenu slicknav_hidden" role="menu" aria-hidden="true" style="display: none;">
+                                            <li><a href="blog.html" role="menuitem" tabindex="-1">Blog</a></li>
+                                            <li><a href="blog_details.html" role="menuitem" tabindex="-1">Blog Details</a></li>
+                                            <li><a href="elements.html" role="menuitem" tabindex="-1">Elements</a></li>
+                                        </ul>
+                                    </li>
+                                </ul></div></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="criadorRotina.html">Criador de Rotina</a></li>
-        </ul>
-    </nav>
+    </div>
+    <!-- Header End -->
+</header>
     <h1>Projeto de Ano</h1>
 
     <div id="agreementModal" class="modal">
@@ -26,7 +60,7 @@
             <div class="modal-scroll-text">
                 <p>
                     Por favor, leia e aceite os termos antes de continuar.<br><br>
-                    Essa rotina é apenas uma sugestão gerada por uma inteligência artificial feita por um aluno do ensino médio, consulte um especialista caso tenha dúvidas e pare de realizar os exercícios em caso de dor excessiva ou mal-estar. <br> Você conhece o seu corpo e seus limites, cada pessoa é diferente, experiemente diferentes números de séries, repetições e peso até encontrar a melhor combinação para você. <br> Não me responsabilizo por qualquer tipo de lesões, machucados ou qualquer outra consequência negativa herdada dos exercícios aqui recomendados. <br> Embora eu tenha feito a devida pesquisa para tentar garantir o melhor resultado e as melhores informações, são simplesmente muitas variáveis para ser possível de analizar e calcular todas elas. <br> Esse projeto não foi feito com a intenção de substituir um profissional de Educação Física e eu recomendo que você consulte um verdadeiro profissional antes de realizar qualquer recomendação feita por essa inteligência artifical.  
+                    Essa rotina é apenas uma sugestão gerada por uma inteligência artificial feita por alunos do ensino médio, consulte um especialista caso tenha dúvidas e pare de realizar os exercícios em caso de dor excessiva ou mal-estar. <br> Você conhece o seu corpo e seus limites, cada pessoa é diferente, experiemente diferentes números de séries, repetições e peso até encontrar a melhor combinação para você. <br> Não nos responsabilizamos por qualquer tipo de lesões, machucados ou qualquer outra consequência negativa herdada dos exercícios aqui recomendados. <br> Embora tenhamos feito a devida pesquisa para tentar garantir o melhor resultado e as melhores informações, são simplesmente muitas variáveis para ser possível de analizar e calcular todas elas. <br> Esse projeto não foi feito com a intenção de substituir um profissional de Educação Física e nós recomendamos que você consulte um verdadeiro profissional antes de realizar qualquer recomendação feita por essa inteligência artifical.  
                     <br><br>
                     Ao clicar em "Aceitar", você confirma ter lido e entendido os riscos e consequências aqui citados, e entende que deveria consultar um verdadeiro profissional antes de tomar qualquer decisão.
                 </p>
@@ -43,7 +77,7 @@
         </select>
         <h3>Qual o seu objetivo?</h3>
         <select id="objetivoXOR">
-            <option value="0">Hipertrofia</option>
+            <option value="0">Ganho de músculos</option>
             <option value="1">Emagrecimento</option>
             <option value="2">Definição</option>
             <option value="3">Condicionamento</option>
@@ -102,8 +136,6 @@
         </div>
         <h3>Quantos dias por semana você pode treinar?</h3>
         <select id="diasXOR">
-            <option value="0">1 dia</option>
-            <option value="1">2 dias</option>
             <option value="2">3 dias</option>
             <option value="3">4 dias</option>
             <option value="4">5 dias</option>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <link rel='stylesheet' href='stylesheetProjeto.css'>
+    <link rel="icon" href="images/logo.png">
+    <title>No Excuse - Início</title>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="logo-space">
+            <img src="images/logo.png" alt="Logo" class="logo-img">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="criadorRotina.html">Criador de Rotina</a></li>
+        </ul>
+    </nav>
+
+    <div id="middlePart">
+        <div id="gallery">
+            <button class="galleryButton" id="backwardGallery" onclick="previousImg()"><</button>
+            <img src="" id="imgInGallery">
+            <button class="galleryButton" id="forwardGallery" onclick="nextImg()">></button>
+            <div id="galleryDescContainer">
+                <a href="" id="descLink"><h2 id="galleryDesc"></h2></a>
+            </div>
+        </div>
+        <div id="section1">
+            <h2>Nosso Criador de Rotina Automático</h2>
+            <a href="criadorRotina.html"><button id="criadorRotinaBtn">COMECE AGORA</button></a> <br>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, odit reprehenderit illum incidunt illo suscipit aperiam vero veniam. Animi necessitatibus ullam deleniti similique maiores exercitationem suscipit ad eaque nostrum aperiam.
+            </p>
+        </div>
+    </div>    
+    
+    <script src="javascriptProjeto.js"></script>
+</body>
+</html>

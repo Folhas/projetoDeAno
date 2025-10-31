@@ -51,25 +51,25 @@ const pathExercicios = [
 ]
 
 const scoreMultipliers = [
-    1000, // calistenia
-    1000, // academia
-    30,   // hipertrofia
-    30,   // emagrecimento
-    30,   // definicao
-    30,   // condicionamento
-    30,   // forca
-    90,   // iniciante
-    70,   // medio
-    50,   // avancado
-    -999,   // pescoco
-    -999,   // ombro
-    -999,   // cotovelo
-    -999,   // mao
-    -999,   // costasSuperior
-    -999,   // costasInferior
-    -999,   // cintura
-    -999,   // joelho
-    -999    // pe
+    1000,
+    1000,
+    30,
+    30,
+    30,
+    30,
+    30,
+    90,
+    70,
+    50,
+    80,
+    80,
+    80,
+    80,
+    80,
+    80,
+    80,
+    80,
+    80
 ]
 
 // Fim das listas de parametros
@@ -120,8 +120,6 @@ function confirmar() {
     mostrarTabelaRotina()
 
     mostrarSetsXReps()
-
-    debugFunction()
 }
 
 function getValues() {
@@ -228,17 +226,8 @@ function setExerciseScore(selecionados) {
             let valorSelecionado = selecionados[i]
             let multiplierAtual = scoreMultipliers[i]
             let propriedadeExercicio = getNestedProperty(exercicio, pathAtual)
-            // i < 10 significa que são os 10 primeiros itens dos pathExercicios (ou seja, os que não são as lesões)
-            if (i < 10) {
-                if (propriedadeExercicio == valorSelecionado) {
+            if (propriedadeExercicio == valorSelecionado) {
                 exercicio.score = exercicio.score + multiplierAtual
-                }
-            }
-            // Essa parte são as lesões
-            else {
-                if (propriedadeExercicio === false && valorSelecionado === true) { // Se o exercício requisitar e o usuário não tiver
-                    exercicio.score = exercicio.score + multiplierAtual // Os multiplierAtual das lesões são todos negativos
-                }
             }
         }
     })
@@ -280,8 +269,17 @@ function checkIfInclinedInExercise(exercicio) {
 }
 
 function divideInArray(currArray) {
-    if (currArray.length > 6) {
-        for (i = currArray.length; i > 6; i--) {
+
+    let exerciciosPorCategoria
+
+    if (diasSelecionado === 1 || diasSelecionado === 2 || diasSelecionado === 5) {
+        exerciciosPorCategoria = diasSelecionado
+    }
+    else if (diasSelecionado === 3 || diasSelecionado === 4) {
+        exerciciosPorCategoria = 3
+    }
+    if (currArray.length > exerciciosPorCategoria) {
+        for (i = currArray.length; i > exerciciosPorCategoria; i--) {
             currArray.pop()
         }
     }
@@ -302,14 +300,14 @@ function divideInDays() {
         dia2.push(...core, ...chest, ...back)
     }
     else if (diasSelecionado === 3) {
-        dia1.push(...back)
-        dia2.push(...chest)
-        dia3.push(...legs)
+        dia1.push(...arms, ...legs)
+        dia2.push(...core, ...back)
+        dia3.push(...chest)
     }
     else if (diasSelecionado === 4) {
         dia1.push(...arms)
-        dia2.push(...back.slice(0, 5), ...core.slice(0, 1))
-        dia3.push(...chest.slice(0, 5), ...core.slice(1, 2))
+        dia2.push(...core, ...back)
+        dia3.push(...chest)
         dia4.push(...legs)
     }
     else if (diasSelecionado === 5) {
@@ -422,19 +420,19 @@ function mostrarSetsXReps() {
     const setsXRepsString = document.createElement('h1')
     setsXReps.appendChild(setsXRepsString)
     if (hipertrofiaSelecionado === true) {
-        setsXRepsValue = 'Número de séries e repetições: 3-5x6-8<br></br>Tempo de descanso: 2min'
+        setsXRepsValue = 'Número de séries e repetições: 3-5x6-12<br></br>Tempo de descanso: 30s-90s'
     }
     if (emagrecimentoSelecionado === true) {
-        setsXRepsValue = 'Número de séries e repetições: 3-4x10-12<br></br>Tempo de descanso: 90s'
+        setsXRepsValue = 'Número de séries e repetições: 3-4x12-15<br></br>Tempo de descanso: 30s-90s'
     }
     if (definicaoSelecionado === true) {
-        setsXRepsValue = 'Número de séries e repetições: 3-4x12-15<br></br>Tempo de descanso: 60s-90s'
+        setsXRepsValue = 'Número de séries e repetições: 3-4x12-15<br></br>Tempo de descanso: 30s-90s'
     }
     if (condicionamentoSelecionado === true) {
-        setsXRepsValue = 'Número de séries e repetições: 2-4x12-15<br></br>Tempo de descanso: 30s'
+        setsXRepsValue = 'Número de séries e repetições: 2-4x12-20<br></br>Tempo de descanso: Mínimo'
     }
     if (forcaSelecionado === true) {
-        setsXRepsValue = 'Número de séries e repetições: 3x4-6<br></br>Tempo de descanso: 2min-5min'
+        setsXRepsValue = 'Número de séries e repetições: 4-6x1-6<br></br>Tempo de descanso: 2min-5min'
     }
     setsXRepsString.innerHTML = setsXRepsValue
     setsXRepsContainer.appendChild(setsXReps)
@@ -450,222 +448,4 @@ function mostrarSetsXReps() {
         setsXRepsDisclaimer.innerHTML += ' Como você colocou ter mais de 50 anos, tenha muito cuidado com os exercícios, não coloque muito esforço no treino para evitar sérios ferimentos.'
     }
     setsXRepsDisclaimer.innerHTML += ' <br></br>Essa rotina é apenas uma sugestão gerada por uma inteligência artificial, consulte um especialista caso tenha dúvidas e pare de realizar os exercícios em caso de dor excessiva ou mal-estar. Você conhece o seu corpo e seus limites, cada pessoa é diferente, experiemente diferentes números de séries, repetições e peso até encontrar a melhor combinação para você.'
-}
-
-
-
-
-//--------------------------------DEBUGGING-------------------------------------------------------
-
-
-let imageList = [
-  'abdominalCrunch.png', 
-  'abRollout.png', 
-  'abWheelRollout.png', 
-  'agachamentoExplosivoGiro.png', 
-  'ankleHops.png', 
-  'archerPushUp.png', 
-  'archerPushUpAvancado.png', 
-  'arnoldPress.png', 
-  'assistedPistol.jpg', 
-  'australianRow.png', 
-  'bandBicpesCurl.png', 
-  'barbellBackSquat.png', 
-  'barbellCurl.png', 
-  'benchDipsAssisted.png', 
-  'benchPress.png', 
-  'birdDog.png', 
-  'bodyweightSquat.png', 
-  'boxJump.png', 
-  'bulgarianSplitSquat.png', 
-  'cableCrossover.png', 
-  'cableCrunch.png', 
-  'cableWoodchopper.png', 
-  'cableWoodchopperHigh.png', 
-  'cableWoodchopperLow.png', 
-  'calfRaise.jpg', 
-  'chestFlyMachine.png', 
-  'chinUp.png', 
-  'chinUpAssistido.png', 
-  'closeGripPushUps.png', 
-  'concentrationCurl.png', 
-  'curtsyLunge.png', 
-  'deadBug.png', 
-  'deadlift.png', 
-  'declineBenchPress.png', 
-  'diamondPushUp.png', 
-  'dipsBanco.png', 
-  'donkeyKick.jpg', 
-  'dragonFlag.png', 
-  'dumbbellFly.png', 
-  'dumbbellHammerCurl.png', 
-  'dumbbellPullover.png', 
-  'facePull.png', 
-  'flexaoDiamante.png', 
-  'flexaoTradicional.png', 
-  'forearmPushUps.png', 
-  'forearmPushUps.png.png', 
-  'frontLeverTuck.png', 
-  'frontSquat.png', 
-  'gluteBridge.png', 
-  'goodMorning.png', 
-  'hammerCurl.png', 
-  'handstandPushUpParede.png', 
-  'hanging Oblique Raise.png', 
-  'hangingKneeRaise.png', 
-  'hangingLegRaise.png', 
-  'hangingLegRaiseTwist.png', 
-  'hangingObliqueRaise.png', 
-  'hipAbductionMachine.png', 
-  'hipAdductionMachine.png', 
-  'hipThrust.png', 
-  'hipThrustUnilateral.jpg', 
-  'hollowBodyHold.png', 
-  'inclideRows.png', 
-  'inclineBarbellPress.png', 
-  'inclineBenchPress.png', 
-  'inclineDumbbellPress.png', 
-  'inclinePushUp.png', 
-  'invertedRow.png', 
-  'jumpingJacks.png', 
-  'jumpSquat.webp', 
-  'landminePress.png', 
-  'latPulldown.png', 
-  'legCurlMachine.png', 
-  'legPress.png', 
-  'legRaiseBarra.png', 
-  'legRaises.png', 
-  'lSit.png', 
-  'machineChestFly.png', 
-  'marchInPlace.png', 
-  'medicineBallRussianTwist.png', 
-  'mergulhoNoBanco.png', 
-  'mountainClimber.png', 
-  'mountainClimbers.png', 
-  'oneArmDumbbellRow.png', 
-  'overheadTricepsExtension.png', 
-  'pikePushups.png', 
-  'pistolSquat.png', 
-  'pistolSquatAssistido.png', 
-  'pistolSquatCompleto.png', 
-  'plank.png', 
-  'plankWithShoulderTap.png', 
-  'ponteGluteoUnilateral.png', 
-  'pranchaAlternada.png', 
-  'pranchaShoulderTap.png', 
-  'preacherCurl.png', 
-  'pseudoPlanchePush.png', 
-  'pullUp.png', 
-  'pullUpAustraliana.png', 
-  'pullUpCompleto.png', 
-  'pullUpExplosivo.png', 
-  'pullUpWeighted.png', 
-  'pullUpWideGrip.png', 
-  'pushUpKnees.png', 
-  'pushUpPose.png', 
-  'pushUpWeighted.png', 
-  'puxadaNegativa.png', 
-  'remadaAustraliana.png', 
-  'reverseCrunch.png', 
-  'reverseCrunchCable.png', 
-  'reverseHyperextension.png', 
-  'ringPushUp.png', 
-  'ringRow.png', 
-  'romanianDeadlift.png', 
-  'russianTwist.png', 
-  'russianTwists.png', 
-  'seatedDumbbellPress.png', 
-  'seatedRow.png', 
-  'seatedRowMachine.png', 
-  'shrimpSquat.png', 
-  'shrugs.png', 
-  'sideCrunch.png', 
-  'sideLunge.jpg', 
-  'sidePlank.png', 
-  'sidePlankHipLift.png', 
-  'sidePlankKnees.png', 
-  'singleLegBridge.jpg', 
-  'singleLegRDL.webp', 
-  'skullCrusher.png', 
-  'squatJump.png', 
-  'stabilityBallPike.png', 
-  'stabilityBallRollout.png', 
-  'stabilityBallSideCrunc.png', 
-  'stepUpBanco.png', 
-  'stepUps.png', 
-  'sumoDeadlift.png', 
-  'sumoSquat.png', 
-  'supermanHold.png', 
-  'tBarRow.png', 
-  'toesToBar.png', 
-  'tricepPushdown.png', 
-  'uprightRow.png', 
-  'vSitUp.png', 
-  'vUp.png', 
-  'walkingLunge.png', 
-  'wallPushUps.png', 
-  'weighted-cossack-squats.webp', 
-  'woodchopper.png'
-]
-
-function debugFunction() {
-    // Helper to normalize filenames for comparison (case, spaces, dashes, accents)
-    function normalizeName(name) {
-        if (!name) return ''
-        return name
-            .toString()
-            .toLowerCase()
-            .normalize('NFD')                // split accents from letters
-            .replace(/\p{Diacritic}/gu, '') // remove diacritics (accents)
-            .replace(/\s+/g, '')            // remove spaces
-            .replace(/[-_]/g, '')            // remove dashes/underscores
-    }
-
-    if (!Array.isArray(exercicios) || exercicios.length === 0) {
-        console.log('Nenhum exercício carregado ainda.');
-        return;
-    }
-
-    // build a set of normalized image filenames for fast lookup
-    const imageSet = new Set(imageList.map(img => normalizeName(img)));
-
-    // copy of exercicios to keep track of missing ones
-    let exerciciosQueNaoAparecem = exercicios.slice();
-
-    exercicios.forEach(function(exercicio) {
-        const caminhoDaImagem = getNestedProperty(exercicio, 'img');
-        if (!caminhoDaImagem) {
-            // No image path present on this exercise — keep it in missing list
-            console.log('Exercício sem propriedade img:', exercicio.nome || exercicio);
-            return;
-        }
-
-        const fileName = caminhoDaImagem.split('/').pop();
-        const normalized = normalizeName(fileName);
-
-        if (imageSet.has(normalized)) {
-            console.log('O exercício', exercicio.nome || fileName, 'aparece no arquivo de imagens!');
-            // remove matching exercise from the missing list by matching normalized filename
-            for (let i = exerciciosQueNaoAparecem.length - 1; i >= 0; i--) {
-                const mImg = getNestedProperty(exerciciosQueNaoAparecem[i], 'img');
-                if (!mImg) continue;
-                const mFile = mImg.split('/').pop();
-                if (normalizeName(mFile) === normalized) {
-                    exerciciosQueNaoAparecem.splice(i, 1);
-                    break;
-                }
-            }
-        } else {
-            console.log('Imagem NÃO encontrada para', exercicio.nome || fileName);
-        }
-    });
-
-    console.log('Esses são os exercícios que não aparecem');
-    exerciciosQueNaoAparecem.forEach(function(exercicio) {
-        console.log(exercicio.nome)
-    })
-    console.log('Nome dos arquivos')
-    exerciciosQueNaoAparecem.forEach(function(exercicio) {
-        console.log(exercicio.img)
-    })
 }

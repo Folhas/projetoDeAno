@@ -64,7 +64,7 @@ h1 {
 
 .selector {
     background: #222;
-    color: #fff;
+    color: #fff !important;
     padding: 24px;
     border-radius: 12px;
     width: 320px;
@@ -72,6 +72,13 @@ h1 {
     box-shadow: 0 4px 24px rgba(255,45,45,0.08);
     border: 1px solid #ff2d2d;
     text-align: left;
+}
+.selector::before{
+  content:"";
+  display:block;
+  height:11rem;    /* header height */
+  visibility:hidden;
+  pointer-events:none;
 }
 
 .button {

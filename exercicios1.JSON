@@ -512,15 +512,6 @@
     "day": "core",
     "img": "./exerciseImages/abRollout.png"
   },
-  "cableWoodchopper": {
-    "nome": "Corte de Lenhador na Polia",
-    "tipoTreino": { "calistenia": false, "academia": true },
-    "objetivo": { "hipertrofia": false, "emagrecimento": true, "definicao": true, "condicionamento": true, "forca": true },
-    "nivel": { "iniciante": true, "medio": true, "avancado": true },
-    "lesao": { "pescoco": true, "ombro": false, "cotovelo": false, "mao": false, "costasSuperior": false, "costasInferior": true, "cintura": false, "joelho": true, "pe": true },
-    "day": "core",
-    "img": "./exerciseImages/cableWoodchopper.png"
-  },
   "sidePlank": {
     "nome": "Prancha Lateral",
     "tipoTreino": { "calistenia": true, "academia": false },
@@ -686,16 +677,6 @@
     "img": "./exerciseImages/agachamentoExplosivoGiro.png"
 },
  
-"archerPushUpAvancado": {
-  "nome": "Flexão arqueada",
-  "tipoTreino": { "calistenia": true, "academia": false },
-  "objetivo": { "hipertrofia": true, "emagrecimento": true, "definicao": true, "condicionamento": true, "forca": true },
-  "nivel": { "iniciante": false, "medio": false, "avancado": true },
-  "lesao": { "pescoco": true, "ombro": false, "cotovelo": false, "mao": false, "costasSuperior": true, "costasInferior": true, "cintura": true, "joelho": true, "pe": true },
-  "day": "chest",
-    "img": "./exerciseImages/archerPushUpAvancado.png"
-},
- 
 "handstandPushUpParede": {
   "nome": "Flexão em pino com apoio na parede",
   "tipoTreino": { "calistenia": true, "academia": false },
@@ -815,14 +796,14 @@
   "day": "core",
     "img": "./exerciseImages/toesToBar.png"
 },
-"pistolSquatAssistido": {
+"assistedPistol": {
   "nome": "Agachamento com uma perna",
   "tipoTreino": { "calistenia": true, "academia": false },
   "objetivo": { "hipertrofia": true, "emagrecimento": true, "definicao": true, "condicionamento": true, "forca": true },
   "nivel": { "iniciante": false, "medio": true, "avancado": true },
   "lesao": { "pescoco": true, "ombro": true, "cotovelo": true, "mao": true, "costasSuperior": true, "costasInferior": true, "cintura": false, "joelho": false, "pe": false },
   "day": "legs",
-    "img": "./exerciseImages/pistolSquatAssistido.png"
+    "img": "./exerciseImages/assistedPistol.png"
 },
 "squatJump": {
   "nome": "Saltos no agachamento",
@@ -983,7 +964,7 @@
     "tipoTreino": { "calistenia": true, "academia": false },  
     "objetivo": { "hipertrofia": true, "emagrecimento": true, "definicao": true, "condicionamento": false, "forca": true },  
     "nivel": { "iniciante": true, "medio": false, "avancado": false },  
-    "lesao": { "pescoco": true, "ombro": true, "cotovelo": true, "mao": true, "costasSuperior": true, "costasInferior": true, "cintura": true, "joelho": false, "pe": true },  
+    "lesao": { "pescoco": true, "ombro": true, "cotovelo": true, "mao": true, "costasSuperior": true, "costasInferior": true, "cintura": true, "joelho": false, "pe": true },
     "day": "legs",
     "img": "./exerciseImages/bodyweightSquat.png"  
 }, 
@@ -1110,5 +1091,338 @@
     "lesao": { "pescoco": true, "ombro": true, "cotovelo": true, "mao": true, "costasSuperior": false, "costasInferior": false, "cintura": false, "joelho": true, "pe": true },  
     "day": "core",
     "img": "./exerciseImages/deadBug.png"  
-} 
+},
+"bodyweightTricepsExtension": {  
+    "nome": "Extensão de Tríceps com Peso Corporal",  
+    "tipoTreino": { "calistenia": true, "academia": false },  
+    "objetivo": { "hipertrofia": true, "emagrecimento": false, "definicao": true, "condicionamento": false, "forca": true },  
+    "nivel": { "iniciante": false, "medio": true, "avancado": true },  
+    "lesao": { "pescoco": true, "ombro": false, "cotovelo": false, "mao": false, "costasSuperior": true, "costasInferior": true, "cintura": true, "joelho": true, "pe": true },  
+    "day": "arms",
+    "img": "./exerciseImages/bodyweightTricepsExtension.png"  
+},
+"benchPushUps": {
+    "nome": "Flexões no Banco",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": false, "emagrecimento": true, "definicao": true, "condicionamento": true, "forca": true },
+    "nivel": { "iniciante": true, "medio": true, "avancado": false },
+    "lesao": { "pescoco": true, "ombro": true, "cotovelo": true, "mao": true, "costasSuperior": true, "costasInferior": true, "cintura": true, "joelho": true, "pe": true },
+    "day": "arms",
+    "img": "./exerciseImages/benchPushUps.png"
+},
+"resistanceBandCurls": {
+    "nome": "Rosca com Faixa Elástica",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": true, "emagrecimento": false, "definicao": true, "condicionamento": false, "forca": true },
+    "nivel": { "iniciante": true, "medio": true, "avancado": false },
+    "lesao": { "pescoco": true, "ombro": true, "cotovelo": true, "mao": true, "costasSuperior": true, "costasInferior": true, "cintura": true, "joelho": true, "pe": true },
+    "day": "arms",
+    "img": "./exerciseImages/resistanceBandCurls.png"
+},
+"towelCurls": {
+    "nome": "Rosca com Toalha e Peso Corporal",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": true, "emagrecimento": false, "definicao": true, "condicionamento": false, "forca": true },
+    "nivel": { "iniciante": true, "medio": true, "avancado": false },
+    "lesao": { "pescoco": true, "ombro": true, "cotovelo": true, "mao": false, "costasSuperior": true, "costasInferior": true, "cintura": true, "joelho": true, "pe": true },
+    "day": "arms",
+    "img": "./exerciseImages/towelCurls.png"
+},
+"doorwayRows": {
+    "nome": "Remada na Porta",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": true, "emagrecimento": true, "definicao": true, "condicionamento": true, "forca": true },
+    "nivel": { "iniciante": true, "medio": true, "avancado": false },
+    "lesao": { "pescoco": true, "ombro": true, "cotovelo": true, "mao": false, "costasSuperior": false, "costasInferior": true, "cintura": true, "joelho": true, "pe": true },
+    "day": "arms",
+    "img": "./exerciseImages/doorwayRows.png"
+},
+"staticBicepsHold": {
+    "nome": "Isometria de Bíceps com Peso Corporal",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": true, "emagrecimento": false, "definicao": true, "condicionamento": false, "forca": true },
+    "nivel": { "iniciante": true, "medio": true, "avancado": true },
+    "lesao": { "pescoco": true, "ombro": true, "cotovelo": false, "mao": true, "costasSuperior": true, "costasInferior": true, "cintura": true, "joelho": true, "pe": true },
+    "day": "arms",
+    "img": "./exerciseImages/staticBicepsHold.png"
+},
+"forearmPlankToPushUp": {
+    "nome": "Prancha de Antebraço para Flexão",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": false, "emagrecimento": true, "definicao": true, "condicionamento": true, "forca": true },
+    "nivel": { "iniciante": true, "medio": true, "avancado": true },
+    "lesao": { "pescoco": true, "ombro": true, "cotovelo": false, "mao": false, "costasSuperior": false, "costasInferior": true, "cintura": true, "joelho": true, "pe": true },
+    "day": "arms",
+    "img": "./exerciseImages/forearmPlankToPushUp.png"
+},
+"pseudoPlanchePushUps": {
+    "nome": "Flexão Pseudo Planche",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": true, "emagrecimento": false, "definicao": true, "condicionamento": false, "forca": true },
+    "nivel": { "iniciante": false, "medio": true, "avancado": true },
+    "lesao": { "pescoco": true, "ombro": false, "cotovelo": false, "mao": false, "costasSuperior": true, "costasInferior": true, "cintura": true, "joelho": true, "pe": true },
+    "day": "arms",
+    "img": "./exerciseImages/pseudoPlanchePushUps.png"
+},
+"closeGripPushUps": {
+    "nome": "Flexões com Pegada Fechada",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": true, "emagrecimento": false, "definicao": true, "condicionamento": true, "forca": true },
+    "nivel": { "iniciante": false, "medio": true, "avancado": true },
+    "lesao": { "pescoco": true, "ombro": true, "cotovelo": false, "mao": false, "costasSuperior": true, "costasInferior": true, "cintura": true, "joelho": true, "pe": true },
+    "day": "arms",
+    "img": "./exerciseImages/closeGripPushUps.png"
+},
+"tigerBendPushUps": {
+    "nome": "Flexões Tiger Bend",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": true, "emagrecimento": false, "definicao": true, "condicionamento": false, "forca": true },
+    "nivel": { "iniciante": false, "medio": false, "avancado": true },
+    "lesao": { "pescoco": true, "ombro": false, "cotovelo": false, "mao": false, "costasSuperior": true, "costasInferior": true, "cintura": true, "joelho": true, "pe": true },
+    "day": "arms",
+    "img": "./exerciseImages/tigerBendPushUps.png"
+},
+  "sumoSquat": {
+    "nome": "Agachamento Sumô",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": true, "emagrecimento": true, "definicao": true, "condicionamento": true, "forca": true },
+    "nivel": { "iniciante": true, "medio": true, "avancado": false },
+    "lesao": { "pescoco": true, "ombro": true, "cotovelo": true, "mao": true, "costasSuperior": true, "costasInferior": true, "cintura": true, "joelho": false, "pe": false },
+    "day": "legs",
+    "img": "./exerciseImages/sumoSquat.png"
+  },
+  "reverseLunge": {
+    "nome": "Passada Reversa",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": true, "emagrecimento": true, "definicao": true, "condicionamento": true, "forca": true },
+    "nivel": { "iniciante": true, "medio": true, "avancado": false },
+    "lesao": { "pescoco": true, "ombro": true, "cotovelo": true, "mao": true, "costasSuperior": true, "costasInferior": true, "cintura": true, "joelho": false, "pe": true },
+    "day": "legs",
+    "img": "./exerciseImages/reverseLunge.png"
+  },
+  "forwardLunge": {
+    "nome": "Passada Frontal",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": true, "emagrecimento": true, "definicao": true, "condicionamento": true, "forca": true },
+    "nivel": { "iniciante": true, "medio": true, "avancado": false },
+    "lesao": { "pescoco": true, "ombro": true, "cotovelo": true, "mao": true, "costasSuperior": true, "costasInferior": true, "cintura": true, "joelho": false, "pe": true },
+    "day": "legs",
+    "img": "./exerciseImages/forwardLunge.png"
+  },
+  "sideLunge": {
+    "nome": "Passada Lateral",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": true, "emagrecimento": true, "definicao": true, "condicionamento": true, "forca": true },
+    "nivel": { "iniciante": true, "medio": true, "avancado": true },
+    "lesao": { "pescoco": true, "ombro": true, "cotovelo": true, "mao": true, "costasSuperior": true, "costasInferior": true, "cintura": true, "joelho": false, "pe": true },
+    "day": "legs",
+    "img": "./exerciseImages/sideLunge.png"
+  },
+  "stepUp": {
+    "nome": "Subida em Banco (Step-up)",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": true, "emagrecimento": true, "definicao": true, "condicionamento": true, "forca": true },
+    "nivel": { "iniciante": true, "medio": true, "avancado": true },
+    "lesao": { "pescoco": true, "ombro": true, "cotovelo": true, "mao": true, "costasSuperior": true, "costasInferior": true, "cintura": true, "joelho": false, "pe": true },
+    "day": "legs",
+    "img": "./exerciseImages/stepUp.png"
+  },
+  "calfRaise": {
+    "nome": "Elevação de Panturrilha",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": true, "emagrecimento": true, "definicao": true, "condicionamento": true, "forca": true },
+    "nivel": { "iniciante": true, "medio": true, "avancado": true },
+    "lesao": { "pescoco": true, "ombro": true, "cotovelo": true, "mao": true, "costasSuperior": true, "costasInferior": true, "cintura": true, "joelho": false, "pe": false },
+    "day": "legs",
+    "img": "./exerciseImages/calfRaise.png"
+  },
+  "jumpSquat": {
+    "nome": "Agachamento com Salto",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": true, "emagrecimento": true, "definicao": true, "condicionamento": true, "forca": true },
+    "nivel": { "iniciante": false, "medio": true, "avancado": true },
+    "lesao": { "pescoco": true, "ombro": true, "cotovelo": true, "mao": true, "costasSuperior": true, "costasInferior": true, "cintura": true, "joelho": false, "pe": true },
+    "day": "legs",
+    "img": "./exerciseImages/jumpSquat.png"
+  },
+  "wallSit": {
+    "nome": "Agachamento Isométrico (Wall Sit)",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": false, "emagrecimento": true, "definicao": true, "condicionamento": true, "forca": true },
+    "nivel": { "iniciante": true, "medio": true, "avancado": true },
+    "lesao": { "pescoco": true, "ombro": true, "cotovelo": true, "mao": true, "costasSuperior": false, "costasInferior": false, "cintura": false, "joelho": true, "pe": true },
+    "day": "legs",
+    "img": "./exerciseImages/wallSit.png"
+  },
+  "pistolSquat": {
+    "nome": "Pistol Squat",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": true, "emagrecimento": true, "definicao": true, "condicionamento": true, "forca": true },
+    "nivel": { "iniciante": false, "medio": false, "avancado": true },
+    "lesao": { "pescoco": true, "ombro": true, "cotovelo": true, "mao": true, "costasSuperior": true, "costasInferior": true, "cintura": true, "joelho": false, "pe": true },
+    "day": "legs",
+    "img": "./exerciseImages/pistolSquat.png"
+  },
+  "shrimpSquat": {
+    "nome": "Shrimp Squat",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": true, "emagrecimento": true, "definicao": true, "condicionamento": true, "forca": true },
+    "nivel": { "iniciante": false, "medio": true, "avancado": true },
+    "lesao": { "pescoco": true, "ombro": true, "cotovelo": true, "mao": true, "costasSuperior": true, "costasInferior": true, "cintura": true, "joelho": false, "pe": true },
+    "day": "legs",
+    "img": "./exerciseImages/shrimpSquat.png"
+  },
+  "nordicCurl": {
+    "nome": "Nordic Curl",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": true, "emagrecimento": false, "definicao": true, "condicionamento": false, "forca": true },
+    "nivel": { "iniciante": false, "medio": false, "avancado": true },
+    "lesao": { "pescoco": true, "ombro": true, "cotovelo": true, "mao": true, "costasSuperior": false, "costasInferior": false, "cintura": false, "joelho": true, "pe": true },
+    "day": "legs",
+    "img": "./exerciseImages/nordicCurl.png"
+  },
+  "jumpLunge": {
+    "nome": "Passada com Salto (Jump Lunge)",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": true, "emagrecimento": true, "definicao": true, "condicionamento": true, "forca": true },
+    "nivel": { "iniciante": false, "medio": true, "avancado": true },
+    "lesao": { "pescoco": true, "ombro": true, "cotovelo": true, "mao": true, "costasSuperior": true, "costasInferior": true, "cintura": true, "joelho": false, "pe": true },
+    "day": "legs",
+    "img": "./exerciseImages/jumpLunge.png"
+  },
+  "skaterJump": {
+    "nome": "Salto Lateral (Skater Jump)",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": true, "emagrecimento": true, "definicao": true, "condicionamento": true, "forca": true },
+    "nivel": { "iniciante": false, "medio": true, "avancado": true },
+    "lesao": { "pescoco": true, "ombro": true, "cotovelo": true, "mao": true, "costasSuperior": true, "costasInferior": true, "cintura": true, "joelho": false, "pe": true },
+    "day": "legs",
+    "img": "./exerciseImages/skaterJump.png"
+  },
+  "curtsyLunge": {
+    "nome": "Passada Curtsy",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": true, "emagrecimento": true, "definicao": true, "condicionamento": true, "forca": false },
+    "nivel": { "iniciante": true, "medio": true, "avancado": true },
+    "lesao": { "pescoco": false, "ombro": false, "cotovelo": false, "mao": false, "costasSuperior": false, "costasInferior": false, "cintura": false, "joelho": true, "pe": false },
+    "day": "legs",
+    "img": "./exerciseImages/curtsyLunge.png"
+  },
+  "cossackSquat": {
+    "nome": "Cossack Squat",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": false, "emagrecimento": true, "definicao": true, "condicionamento": true, "forca": true },
+    "nivel": { "iniciante": false, "medio": true, "avancado": true },
+    "lesao": { "pescoco": false, "ombro": false, "cotovelo": false, "mao": false, "costasSuperior": false, "costasInferior": false, "cintura": false, "joelho": true, "pe": false },
+    "day": "legs",
+    "img": "./exerciseImages/cossackSquat.png"
+  },
+  "singleLegRDL": {
+    "nome": "Romanian Deadlift Unilateral (Peso Corporal)",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": true, "emagrecimento": false, "definicao": true, "condicionamento": false, "forca": true },
+    "nivel": { "iniciante": false, "medio": true, "avancado": true },
+    "lesao": { "pescoco": false, "ombro": false, "cotovelo": false, "mao": false, "costasSuperior": false, "costasInferior": true, "cintura": false, "joelho": false, "pe": false },
+    "day": "legs",
+    "img": "./exerciseImages/singleLegRDL.png"
+  },
+  "singleLegBridge": {
+    "nome": "Ponte de Glúteos Unilateral",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": true, "emagrecimento": false, "definicao": true, "condicionamento": true, "forca": true },
+    "nivel": { "iniciante": false, "medio": true, "avancado": true },
+    "lesao": { "pescoco": false, "ombro": false, "cotovelo": false, "mao": false, "costasSuperior": false, "costasInferior": true, "cintura": true, "joelho": false, "pe": false },
+    "day": "legs",
+    "img": "./exerciseImages/singleLegBridge.png"
+  },
+  "hipThrustUnilateral": {
+    "nome": "Hip Thrust Unilateral (variante de Ponte)",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": true, "emagrecimento": false, "definicao": true, "condicionamento": false, "forca": true },
+    "nivel": { "iniciante": true, "medio": true, "avancado": true },
+    "lesao": { "pescoco": false, "ombro": false, "cotovelo": false, "mao": false, "costasSuperior": false, "costasInferior": true, "cintura": true, "joelho": false, "pe": false },
+    "day": "legs",
+    "img": "./exerciseImages/hipThrustUnilateral.png"
+  },
+  "donkeyKick": {
+    "nome": "Donkey Kick",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": false, "emagrecimento": false, "definicao": true, "condicionamento": false, "forca": false },
+    "nivel": { "iniciante": true, "medio": true, "avancado": true },
+    "lesao": { "pescoco": false, "ombro": false, "cotovelo": false, "mao": false, "costasSuperior": false, "costasInferior": true, "cintura": true, "joelho": false, "pe": false },
+    "day": "legs",
+    "img": "./exerciseImages/donkeyKick.png"
+  },
+  "fireHydrant": {
+    "nome": "Fire Hydrant",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": false, "emagrecimento": false, "definicao": true, "condicionamento": false, "forca": false },
+    "nivel": { "iniciante": true, "medio": true, "avancado": true },
+    "lesao": { "pescoco": false, "ombro": false, "cotovelo": false, "mao": false, "costasSuperior": false, "costasInferior": true, "cintura": true, "joelho": false, "pe": false },
+    "day": "legs",
+    "img": "./exerciseImages/fireHydrant.png"
+  },
+  "ankleHops": {
+    "nome": "Ankle Hops",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": false, "emagrecimento": true, "definicao": false, "condicionamento": true, "forca": false },
+    "nivel": { "iniciante": false, "medio": true, "avancado": true },
+    "lesao": { "pescoco": false, "ombro": false, "cotovelo": false, "mao": false, "costasSuperior": false, "costasInferior": true, "cintura": false, "joelho": true, "pe": true },
+    "day": "legs",
+    "img": "./exerciseImages/ankleHops.png"
+  },
+  "broadJump": {
+    "nome": "Salto à Distância (Broad Jump)",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": false, "emagrecimento": true, "definicao": false, "condicionamento": true, "forca": true },
+    "nivel": { "iniciante": false, "medio": true, "avancado": true },
+    "lesao": { "pescoco": false, "ombro": false, "cotovelo": false, "mao": false, "costasSuperior": false, "costasInferior": true, "cintura": false, "joelho": true, "pe": true },
+    "day": "legs",
+    "img": "./exerciseImages/broadJump.png"
+  },
+  "explosiveSquatTwist": {
+    "nome": "Agachamento Explosivo com Giro",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": false, "emagrecimento": true, "definicao": true, "condicionamento": true, "forca": true },
+    "nivel": { "iniciante": false, "medio": true, "avancado": true },
+    "lesao": { "pescoco": false, "ombro": false, "cotovelo": false, "mao": false, "costasSuperior": false, "costasInferior": true, "cintura": false, "joelho": true, "pe": true },
+    "day": "legs",
+    "img": "./exerciseImages/explosiveSquatTwist.png"
+  },
+  "sissySquat": {
+    "nome": "Sissy Squat",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": true, "emagrecimento": false, "definicao": true, "condicionamento": false, "forca": true },
+    "nivel": { "iniciante": false, "medio": true, "avancado": true },
+    "lesao": { "pescoco": false, "ombro": false, "cotovelo": false, "mao": false, "costasSuperior": false, "costasInferior": true, "cintura": false, "joelho": true, "pe": false },
+    "day": "legs",
+    "img": "./exerciseImages/sissySquat.png"
+  },
+  "reverseNordicCurl": {
+    "nome": "Reverse Nordic Curl",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": false, "emagrecimento": false, "definicao": true, "condicionamento": false, "forca": true },
+    "nivel": { "iniciante": false, "medio": true, "avancado": true },
+    "lesao": { "pescoco": false, "ombro": false, "cotovelo": false, "mao": false, "costasSuperior": false, "costasInferior": true, "cintura": false, "joelho": true, "pe": false },
+    "day": "legs",
+    "img": "./exerciseImages/reverseNordicCurl.png"
+  },
+  "nordicHamCurl": {
+    "nome": "Nordic Hamstring Curl",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": true, "emagrecimento": false, "definicao": true, "condicionamento": false, "forca": true },
+    "nivel": { "iniciante": false, "medio": true, "avancado": true },
+    "lesao": { "pescoco": false, "ombro": false, "cotovelo": false, "mao": false, "costasSuperior": false, "costasInferior": true, "cintura": false, "joelho": true, "pe": false },
+    "day": "legs",
+    "img": "./exerciseImages/nordicHamCurl.png"
+  },
+  "gluteHamRaise": {
+    "nome": "Glute Ham Raise (quando houver ancoragem)",
+    "tipoTreino": { "calistenia": true, "academia": false },
+    "objetivo": { "hipertrofia": true, "emagrecimento": false, "definicao": true, "condicionamento": false, "forca": true },
+    "nivel": { "iniciante": false, "medio": true, "avancado": true },
+    "lesao": { "pescoco": false, "ombro": false, "cotovelo": false, "mao": false, "costasSuperior": false, "costasInferior": true, "cintura": false, "joelho": true, "pe": false },
+    "day": "legs",
+    "img": "./exerciseImages/gluteHamRaise.png"
+  }
 }
