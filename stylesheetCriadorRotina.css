@@ -233,6 +233,7 @@ label {
     .nav-links {
         gap: 12px;
     }
-
+    header {
+        display: none !important;
+    }
 }
-
