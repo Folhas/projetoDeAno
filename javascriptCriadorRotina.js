@@ -419,7 +419,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function mostrarInstrucao() {
     const tabelaDiv = document.getElementById('tabelaRotinaContainer')
     const instrucao = document.createElement('p')
-    if (window.innerWidth < 600) { //caso seja a tela de um celular
+    if (window.innerWidth < 900) { //caso seja a tela de um celular
         instrucao.innerHTML = 'Passe o dedo por cima dos exercícios para mostrar uma imagem de instrução.'
     }
     else {
@@ -687,3 +687,4 @@ function debugFunction() {
     })
 
 }
+
