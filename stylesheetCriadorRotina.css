@@ -215,6 +215,11 @@ label {
     cursor: pointer;
     color: #ff2d2d;
 }
+#instrucao {
+    align-self: center;
+    justify-self: center;
+    color: #ffe2b6;
+}
 @media (max-width: 600px) {
     .selector, .tabelaRotinaContainer, .setsXRepsContainer {
         width: 95%;
@@ -228,4 +233,5 @@ label {
     .nav-links {
         gap: 12px;
     }
+
 }
