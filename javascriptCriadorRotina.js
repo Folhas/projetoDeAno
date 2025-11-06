@@ -121,6 +121,10 @@ function confirmar() {
 
     mostrarSetsXReps()
 
+    mostrarInstrucao()
+
+    document.getElementById('tabelaRotinaContainer').scrollIntoView({behavior: 'smooth'})
+
     debugFunction()
 }
 
@@ -412,6 +416,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+function mostrarInstrucao() {
+    const tabelaDiv = document.getElementById('tabelaRotinaContainer')
+    const instrucao = document.createElement('p')
+    if (window.innerWidth < 600) { //caso seja a tela de um celular
+        instrucao.innerHTML = 'Passe o dedo por cima dos exercícios para mostrar uma imagem de instrução.'
+    }
+    else {
+        instrucao.innerHTML = 'Passe o mouse por cima dos exercícios para mostrar uma imagem de instrução.'
+    }
+    tabelaDiv.appendChild(instrucao)
+
+    instrucao.id = 'instrucao'
+}
 function mostrarSetsXReps() {
     let setsXRepsValue
     const setsXRepsContainer = document.getElementById('setsXRepsContainer')
@@ -668,4 +685,5 @@ function debugFunction() {
     exerciciosQueNaoAparecem.forEach(function(exercicio) {
         console.log(exercicio.img)
     })
+
 }
