@@ -220,7 +220,7 @@ label {
     justify-self: center;
     color: #ffe2b6;
 }
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .selector, .tabelaRotinaContainer, .setsXRepsContainer {
         width: 95%;
         padding: 12px;
@@ -235,3 +235,4 @@ label {
     }
 
 }
+
